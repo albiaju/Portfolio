@@ -1,61 +1,52 @@
-import { Github, Linkedin, Mail, Smartphone } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const personalInfo = {
-    name: "Albi AJu",
-    role: "Full Stack Developer",
-    bio: "Passionate developer with a knack for building beautiful and functional web applications.",
-    email: "contact@example.com",
-    phone: "+1234567890",
+    name: "ALBI AJU",
+    role: "Data Analyst",
+    bio: "Transforming raw data into actionable insights. Skilled in Python, SQL, and Data Visualization. Graduating in March 2026.",
+    email: "albiaju2001@gmail.com",
+    phone: "+91-8281035489",
     socials: [
-        { name: "GitHub", url: "https://github.com", icon: Github },
-        { name: "LinkedIn", url: "https://linkedin.com", icon: Linkedin },
-        { name: "Email", url: "mailto:contact@example.com", icon: Mail },
+        { name: "GitHub", url: "https://github.com/albiaju", icon: Github },
+        { name: "LinkedIn", url: "https://www.linkedin.com/in/albi-aju-249391296/", icon: Linkedin },
+        { name: "Email", url: "mailto:albiaju2001@gmail.com", icon: Mail },
     ]
 };
 
 export const projects = [
     {
         id: 1,
-        title: "Project One",
-        description: "A fantastic project that solves a real-world problem.",
-        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=640",
-        tags: ["React", "Node.js", "MongoDB"],
-        demo: "#",
-        code: "#"
+        title: "AI Document Query System",
+        description: "Built an AI-based document query system by designing clean REST APIs using FastAPI. Implemented session memory and multi-document querying with vector search optimization.",
+        image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=640",
+        tags: ["Python", "FastAPI", "React.js", "Vector Search"],
+        code: "https://github.com/albiaju/ceino_chatbot"
     },
     {
         id: 2,
-        title: "Project Two",
-        description: "Another great application with amazing features.",
-        image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?auto=format&fit=crop&q=80&w=640",
-        tags: ["Vue", "Firebase"],
-        demo: "#",
-        code: "#"
-    },
-    {
-        id: 3,
-        title: "Project Three",
-        description: "Creative design implementation.",
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=640",
-        tags: ["HTML", "CSS", "JavaScript"],
-        demo: "#",
-        code: "#"
+        title: "Heart Attack Risk Analysis",
+        description: "Built a data pipeline for cleaning, EDA, and feature selection. Implemented Logistic Regression, Random Forest, and KNN models. Delivered results via Streamlit app.",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=640",
+        tags: ["Python", "Streamlit", "ML", "EDA"],
+        code: "https://github.com/albiaju/Heart_Attack_prediction"
     }
 ];
 
 export const experience = [
     {
         id: 1,
-        role: "Senior Developer",
-        company: "Tech Corp",
-        period: "2023 - Present",
-        description: "Leading the frontend team and shipping cool features."
+        role: "AI Engineer Intern",
+        company: "Ceino Technologies",
+        companyUrl: "https://ceino.com/",
+        period: "May 2025 – Jun 2025",
+        description: "Built an AI-based document query system using FastAPI and React. Optimized retrieval logic with vector search and collaborated in a Git-based remote workflow."
     },
     {
         id: 2,
-        role: "Web Developer",
-        company: "Startup Inc",
-        period: "2021 - 2023",
-        description: "Built the main product from scratch using React."
+        role: "Java Developer Intern",
+        company: "Cognifyz Technologies",
+        companyUrl: "https://cognifyz.com/",
+        period: "May 2024 – Jun 2024",
+        description: "Strengthened Java OOP concepts. Built a Java Swing Tic-Tac-Toe application and practiced debugging and writing maintainable code."
     }
 ];

@@ -3,42 +3,48 @@ import { motion } from 'framer-motion';
 import { experience } from '../data/portfolio';
 
 const Experience = () => {
-    return (
-        <section id="experience" className="experience-section">
-            <div className="container">
-                <motion.h2
-                    className="section-title"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                >
-                    Experience
-                </motion.h2>
+  return (
+    <section id="experience" className="experience-section">
+      <div className="container">
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          Experience
+        </motion.h2>
 
-                <div className="timeline">
-                    {experience.map((exp, index) => (
-                        <motion.div
-                            key={exp.id}
-                            className="timeline-item"
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="timeline-content">
-                                <div className="timeline-header">
-                                    <h3>{exp.role}</h3>
-                                    <span className="company">{exp.company}</span>
-                                    <span className="period">{exp.period}</span>
-                                </div>
-                                <p className="description">{exp.description}</p>
-                            </div>
-                        </motion.div>
-                    ))}
+        <div className="timeline">
+          {experience.map((exp, index) => (
+            <motion.div
+              key={exp.id}
+              className="timeline-item"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="timeline-content">
+                <div className="timeline-header">
+                  <h3>{exp.role}</h3>
+                  {exp.companyUrl ? (
+                    <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className="company-link">
+                      {exp.company}
+                    </a>
+                  ) : (
+                    <span className="company">{exp.company}</span>
+                  )}
+                  <span className="period">{exp.period}</span>
                 </div>
-            </div>
+                <p className="description">{exp.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
 
-            <style jsx>{`
+      <style jsx>{`
         .experience-section {
           padding: 5rem 2rem;
           background: #0a0a0a;
@@ -92,9 +98,16 @@ const Experience = () => {
           font-size: 1.25rem;
           color: white;
         }
-        .company {
+        }
+        .company, .company-link {
           color: var(--primary-color);
           font-weight: 600;
+          text-decoration: none;
+          transition: 0.2s;
+        }
+        .company-link:hover {
+          text-decoration: underline;
+          opacity: 0.8;
         }
         .period {
           font-size: 0.9rem;
@@ -114,8 +127,8 @@ const Experience = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Experience;
